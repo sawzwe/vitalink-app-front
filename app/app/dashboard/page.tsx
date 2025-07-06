@@ -29,7 +29,7 @@ export default function DashboardPage() {
               Next appointment: {mockUpcomingBookings[0]?.date}
             </p>
             <Button asChild className="mt-4 w-full">
-              <Link href="/app/booking">View All</Link>
+              <Link href="/app/booking/upcoming">View All</Link>
             </Button>
           </CardContent>
         </Card>
