@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Shield, Clock } from "lucide-react";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -21,9 +22,11 @@ export function HeroSection() {
             Experience the future of healthcare with VitaLink. Connect with board-certified doctors, manage your health records, and receive personalized care from the comfort of your home.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <Button size="lg" className="text-lg px-8 bg-secondary hover:bg-secondary/90">
-              Start Your Journey
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button size="lg" className="text-lg px-8 bg-secondary hover:bg-secondary/90" asChild>
+              <Link href="/signin">
+                Sign In
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-8 border-secondary text-secondary hover:bg-secondary/10">
               Explore Plans

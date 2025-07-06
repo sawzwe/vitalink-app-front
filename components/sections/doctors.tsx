@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
+import Image from 'next/image';
 
 const doctors = [
   {
@@ -38,10 +39,12 @@ export function DoctorsSection() {
           {doctors.map((doctor, index) => (
             <Card key={index} className="overflow-hidden group hover:border-secondary/50 transition-colors">
               <div className="aspect-square relative overflow-hidden">
-                <img
+                <Image
                   src={doctor.image}
                   alt={doctor.name}
-                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                  width={400}
+                  height={400}
+                  className="w-full h-64 object-cover rounded-lg"
                 />
               </div>
               <CardContent className="pt-6">

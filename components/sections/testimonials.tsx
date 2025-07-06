@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import Image from 'next/image';
 
 const testimonials = [
   {
@@ -45,10 +46,12 @@ export function TestimonialsSection() {
             <Card key={index} className="bg-background">
               <CardContent className="pt-6">
                 <div className="flex items-center gap-4 mb-4">
-                  <img
+                  <Image
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-12 h-12 rounded-full"
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 rounded-full object-cover"
                   />
                   <div>
                     <h3 className="font-semibold">{testimonial.name}</h3>
